@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="config.mybatis.mapper.oracle.board">
+	<sql id="Col">
+		no, memberid, password, title, content, regdate, (sysdate-regdate)*24 as NewImgTerm, cnt, fileName
+	</sql>
+
+	<select id="selectAll" parameterType="SearchVO" resultType="BoardVO">
+		select * from
+		(
+			select rownum as RNUM, list.* from (
+				select <include refid="Col"/> from board order by no desc
+			)list
+		)
+		<![CDATA[
+		where RNUM > #{firstRecordIndex}
+		and RNUM <= #{firstRecordIndex} + #{recordCountPerPage}
+		]]>
+	</select>
+	
+	<select id="getTotalRecord" parameterType="SearchVO" resultType="int">
+		select count(*) from board
+	</select>
+	
+	<insert id="insert" parameterType="BoardVO">
+		<selectKey keyProperty="no" order="BEFORE" resultType="int">
+			select board_seq.nextval from dual
+		</selectKey>
+		insert into board(no, memberid, password, title, content, ip_address, filename, filesize)
+		values(#{no}, #{memberid}, #{password}, #{title}, #{content}, #{ip_address}, #{fileName}, #{fileSize})
+	</insert>
+	
+	<select id="detail" parameterType="int" resultType="BoardVO">
+		select * from board where no=#{no}
+	</select>
+	
+	<update id="readCount" parameterType="int">
+		update board set cnt=cnt+1 where no=#{no}
+	</update>
+	
+	<update id="edit" parameterType="BoardVO">
+		update board
+		set memberid=#{memberid}, password=#{password}, title=#{title}, content=#{content}, ip_address=#{ip_address}
+		where no=#{no}
+	</update>
+	
+	<delete id="delete" parameterType="int">
+		delete board where no=#{no}
+	</delete>
+	
+	<update id="downCount" parameterType="int">
+		update board set downcount = downcount + 1 where no=#{no}
+	</update>
+
+</mapper>

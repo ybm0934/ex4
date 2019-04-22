@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+h1 {
+	font-size: 2.5em;
+	font-weight: bold;
+	padding: 10px 0px 0px 20px;
+}
+
+table.detail_table {
+	width: 100%;
+	border-top: 3px solid black;
+}
+
+.detail_table tr:first-child th {
+	text-align: left;
+	font-size: 1.7em;
+	height: 50px;
+	border-bottom: 1px solid rgba(220, 220, 220, 1);
+}
+
+.detail_table tr:nth-child(2) th {
+	height: 35px;
+	color: rgba(180, 180, 180, 1);
+}
+
+.detail_table tr:nth-child(2) th:first-child {
+	text-align: left;
+	font-size: 1.1em;
+}
+
+.detail_table tr:nth-child(2) th:last-child {
+	text-align: right;
+	font-size: 1.1em;
+}
+
+.detail_table .child_3 {
+	text-align: right;
+	font-size: 1.1em;
+	padding: 40px 0px 15px 0px;
+	color: gray;
+}
+
+.detail_table .child_3 a {
+	text-decoration: none;
+	color: gray;
+	padding: 10px;
+	font-size: 0.9em;
+}
+
+.detail_table .child_3 a:hover {
+	background: #efeded;
+}
+
+.detail_table tr:last-child td {
+	width: 100%;
+	padding: 25px 30px 60px 30px;
+	height: 300px;
+	vertical-align: top;
+}
+
+.detail_btn {
+	border-bottom: 3px solid black;
+	text-align: right;
+	padding-bottom: 30px;
+}
+
+.detail_btn .btn {
+	border: 1px solid gray;
+	background: white;
+	color: gray;
+	width: 65px;
+	height: 35px;
+	font-weight: bold;
+	font-size: 0.9em;
+	cursor: pointer;
+	margin-right: 10px;
+	outline: none;
+}
+
+.btn:hover {
+	background: black;
+	color: white;
+	border: 1px solid black;
+}
+
+.wall {
+	margin: 0px 15px 0 20px;
+}

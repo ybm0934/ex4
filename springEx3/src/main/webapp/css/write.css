@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+h1 {
+	font-size: 2.5em;
+	font-weight: bold;
+	padding: 10px 0px 0px 20px;
+}
+
+table.write_table {
+	margin: 0 auto;
+	border-top: 3px solid black;
+	border-bottom: 3px solid black;
+	width: 100%;
+}
+
+th {
+	text-align: right;
+	padding-right: 15px;
+	width: 20%;
+}
+
+th, td {
+	border: 1px solid #dcdcdc;
+}
+
+.text {
+	vertical-align: middle;
+	width: 97%;
+	margin: 10px;
+	height: 20px;
+	border: 1px solid white;
+	outline: none;
+}
+
+.write_btn {
+	text-align: right;
+	margin-top: 20px;
+}
+
+input#regit {
+	height: 40px;
+	width: 100px;
+	background: black;
+	color: white;
+	border: 1px solid black;
+	font-weight: bold;
+	font-size: 15px;
+	cursor: pointer;
+	outline: none;
+}
+
+#regit:hover {
+	background: brown;
+	border: 1px solid brown;
+}
+
+input#return {
+	height: 40px;
+	width: 100px;
+	background: white;
+	color: black;
+	border: 1px solid black;
+	font-size: 15px;
+	cursor: pointer;
+	outline: none;
+}
+
+input#attach {
+	margin: 10px;
+	width: 40%;
+	cursor: pointer;
+	outline: none;
+}
+
+.fileSpn {
+	font-size: 0.9em;
+	font-weight: bold;
+	color: #ff00af;
+	margin-left: 5px;
+}

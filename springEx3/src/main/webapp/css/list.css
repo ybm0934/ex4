@@ -1,0 +1,95 @@
+@charset "UTF-8";
+
+h1 {
+	font-size: 2.5em;
+	font-weight: bold;
+	padding: 10px 0px 0px 20px;
+}
+
+.board {
+	border-spacing: 0px;
+	width: 100%;
+}
+
+.board thead tr th {
+	border-top: 3px solid black;
+	border-bottom: 1px solid rgba(213, 213, 213, 1);
+	color: rgba(70, 70, 70, 1);
+	padding: 10px 0px 10px 0px;
+}
+
+.board tbody tr td {
+	border-bottom: 1px solid rgba(213, 213, 213, 1);
+	padding: 10px 0px 10px 0px;
+	color: gray;
+	font-size: 0.9em;
+}
+
+.page {
+	text-align: center;
+	margin: 30px;
+}
+
+span .pageNum1 {
+	padding: 10px;
+	border: 1px solid gray;
+}
+
+span.pageNum1 {
+	border: 1px solid gray;
+	padding: 10px;
+	cursor: pointer;
+}
+
+span.pageNum2 {
+	color: white;
+	background: black;
+	padding: 10px;
+}
+
+span.pageNum3 {
+	padding: 10px;
+}
+
+span.pageNum2:hover {
+	background: brown;
+}
+
+.board a {
+	text-decoration: none;
+	color: black;
+}
+
+.board a:hover {
+	color: red;
+	font-weight: bold;
+}
+
+.board a:visited {
+	color: gray;
+}
+
+.board a:visited:hover{
+	color: red;
+}
+
+.list_div_btn {
+	text-align: right;
+}
+
+#regit {
+	height: 40px;
+	width: 100px;
+	background: black;
+	color: white;
+	border: 1px solid black;
+	font-weight: bold;
+	font-size: 15px;
+	outline: none;
+}
+
+#regit:hover {
+	background: brown;
+	border: 1px solid brown;
+}
+
